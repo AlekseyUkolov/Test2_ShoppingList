@@ -1,8 +1,8 @@
 package com.example.test2_shoppinglist.domain
 
 class EditShopListItemUseCase {
-    fun editShopItem(id: Int){
-        //id идентификатор ShopItem
+    fun editShopItem(shopItem: ShopItem){
+        //shopItemID идентификатор ShopItem
         TODO()
     }
 
