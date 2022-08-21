@@ -1,9 +1,9 @@
 package com.example.test2_shoppinglist.domain
 
-class EditShopListItemUseCase {
+class EditShopListItemUseCase(private val shopListRepository: ShopListRepository) {
     fun editShopItem(shopItem: ShopItem){
         //shopItemID идентификатор ShopItem
-        TODO()
+        shopListRepository.editShopItem(shopItem)
     }
 
 }
