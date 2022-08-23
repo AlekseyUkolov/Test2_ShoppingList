@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         //подписываемся на модель данных
         viewModel.shopList.observe(this){
             //Log.d("MyLog","${it.toString()}")
-            shopListAdapter.shopList=it
+            shopListAdapter.submitList(it) // это запускается в новом потоке
         }
     }
 
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                val item = shopListAdapter.shopList[viewHolder.adapterPosition]
+                val item = shopListAdapter.currentList[viewHolder.adapterPosition]
                 viewModel.deleteShopItem(item)
             }
 
