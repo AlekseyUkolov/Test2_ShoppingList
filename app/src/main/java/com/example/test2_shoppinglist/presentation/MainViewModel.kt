@@ -18,12 +18,6 @@ class MainViewModel:ViewModel() {
 
     val shopList= getShopListUseCase.getShopList()
 
-
-
-   /* fun editShopItem(shopItem: ShopItem){
-        editShopListItemUseCase.editShopItem(shopItem)
-    }*/
-
     fun deleteShopItem(shopItem: ShopItem){
         deleteShopItemUseCase.deleteShopItem(shopItem)
     }
