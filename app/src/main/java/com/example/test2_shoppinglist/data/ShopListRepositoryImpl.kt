@@ -8,15 +8,12 @@ import kotlin.random.Random
 
 object ShopListRepositoryImpl: ShopListRepository {
     private val shopListLD: MutableLiveData<List<ShopItem>> = MutableLiveData()
-
-    // private val shopList= mutableListOf<ShopItem>() еще одна возможная реализация чтобы список был всегда отсортирован
     private val shopList= sortedSetOf<ShopItem>({o1,o2-> o1.id.compareTo(o2.id)})//Список который будет всегда отсортирован
     private var autoIncremetID=0
     //заполняем список тестовыми значениями
     init {
         for(i in 0 until 1000){
             val item= ShopItem("Name_$i", Random.nextInt(0,100),Random.nextBoolean())
-            //shopList.add(i,item)
             addItem(item)
         }
     }

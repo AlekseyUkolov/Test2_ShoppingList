@@ -3,7 +3,6 @@ package com.example.test2_shoppinglist.presentation
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.test2_shoppinglist.data.ShopListRepositoryImpl
-import com.example.test2_shoppinglist.data.ShopListRepositoryImpl.getShopList
 import com.example.test2_shoppinglist.domain.DeleteShopItemUseCase
 import com.example.test2_shoppinglist.domain.EditShopListItemUseCase
 import com.example.test2_shoppinglist.domain.GetShopListUseCase
